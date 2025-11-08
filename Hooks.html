@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
- 
   <title>My Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -31,7 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/css/style.css">
   <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
   * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
@@ -85,94 +84,192 @@
 
     </div>
   </header><!-- End Header -->
+      
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/slider_one.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>Contact</h2>
+        <h2>HOOKS</h2>
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>Contact</li>
+          <li>HOOKS</li>
         </ol>
 
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-map"></i>
-              <h3>Our Address</h3>
-              <p> Defence View Society
-                Phase 01 Karachi Pakistan</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-envelope"></i>
-              <h3>Email Us</h3>
-              <p>aayeshaali937@gmail.com
-              </p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-telephone"></i>
-              <h3>Call Us</h3>
-              <p>+92 324 3501697</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-
-          <div class="col-lg-6 ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-              frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-          </div><!-- End Google Maps -->
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row gy-4">
-                <div class="col-lg-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-lg-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
+    <!-- ======= Projet Details Section ======= -->
   </main><!-- End #main -->
+
+  <div class="container">
+    <h1>React Hooks</h1>
+    <p>This page provides a detailed explanation of React Hooks, their usage, best practices, and examples for portfolio or interview purposes.</p>
+  
+    <!-- Hooks Basics -->
+    <div class="topic">
+      <h2>1. What are React Hooks?</h2>
+      <p>Hooks are functions introduced in React 16.8 that let you use **state** and **other React features** in functional components without writing class components.</p>
+      <ul>
+        <li>They allow cleaner, reusable, and readable code.</li>
+        <li>Common hooks include useState, useEffect, useContext, useReducer, and custom hooks.</li>
+      </ul>
+    </div>
+  
+    <!-- useState -->
+    <div class="topic">
+      <h2>2. useState</h2>
+      <p>useState allows you to add state to functional components.</p>
+      <div class="code-block">
+  <pre>
+  import React, { useState } from 'react';
+  
+  function Counter() {
+    const [count, setCount] = useState(0);
+  
+    return (
+      &lt;div&gt;
+        &lt;p&gt;Count: {count}&lt;/p&gt;
+        &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Increment&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+  </pre>
+      </div>
+    </div>
+  
+    <!-- useEffect -->
+    <div class="topic">
+      <h2>3. useEffect</h2>
+      <p>useEffect allows you to perform side effects such as data fetching, subscriptions, or DOM updates in functional components.</p>
+      <div class="code-block">
+  <pre>
+  import React, { useState, useEffect } from 'react';
+  
+  function Users() {
+    const [users, setUsers] = useState([]);
+  
+    useEffect(() =&gt; {
+      fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res =&gt; res.json())
+        .then(data =&gt; setUsers(data));
+    }, []); // empty dependency array runs only once
+  
+    return (
+      &lt;ul&gt;
+        {users.map(user =&gt; (&lt;li key={user.id}&gt;{user.name}&lt;/li&gt;))}
+      &lt;/ul&gt;
+    );
+  }
+  </pre>
+      </div>
+    </div>
+  
+    <!-- useContext -->
+    <div class="topic">
+      <h2>4. useContext</h2>
+      <p>useContext lets you consume a context value without prop drilling.</p>
+      <div class="code-block">
+  <pre>
+  import React, { useContext, createContext } from 'react';
+  
+  const ThemeContext = createContext('light');
+  
+  function ThemedComponent() {
+    const theme = useContext(ThemeContext);
+    return &lt;div&gt;Current theme: {theme}&lt;/div&gt;;
+  }
+  
+  function App() {
+    return (
+      &lt;ThemeContext.Provider value="dark"&gt;
+        &lt;ThemedComponent /&gt;
+      &lt;/ThemeContext.Provider&gt;
+    );
+  }
+  </pre>
+      </div>
+    </div>
+  
+    <!-- useReducer -->
+    <div class="topic">
+      <h2>5. useReducer</h2>
+      <p>useReducer is useful for managing complex state logic.</p>
+      <div class="code-block">
+  <pre>
+  import React, { useReducer } from 'react';
+  
+  const initialState = 0;
+  function reducer(state, action) {
+    switch(action.type){
+      case 'increment': return state + 1;
+      case 'decrement': return state - 1;
+      default: return state;
+    }
+  }
+  
+  function Counter() {
+    const [count, dispatch] = useReducer(reducer, initialState);
+    return (
+      &lt;div&gt;
+        &lt;p&gt;Count: {count}&lt;/p&gt;
+        &lt;button onClick={() =&gt; dispatch({type:'increment'})}&gt;+&lt;/button&gt;
+        &lt;button onClick={() =&gt; dispatch({type:'decrement'})}&gt;-&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+  </pre>
+      </div>
+    </div>
+  
+    <!-- Custom Hooks -->
+    <div class="topic">
+      <h2>6. Custom Hooks</h2>
+      <p>Custom hooks allow you to reuse logic across components.</p>
+      <div class="code-block">
+  <pre>
+  import { useState, useEffect } from 'react';
+  
+  function useFetch(url) {
+    const [data, setData] = useState([]);
+    useEffect(() =&gt; {
+      fetch(url)
+        .then(res =&gt; res.json())
+        .then(data =&gt; setData(data));
+    }, [url]);
+    return data;
+  }
+  
+  // Usage
+  import React from 'react';
+  function Users() {
+    const users = useFetch('https://jsonplaceholder.typicode.com/users');
+    return (
+      &lt;ul&gt;
+        {users.map(user =&gt; (&lt;li key={user.id}&gt;{user.name}&lt;/li&gt;))}
+      &lt;/ul&gt;
+    );
+  }
+  </pre>
+      </div>
+    </div>
+  
+    <!-- Best Practices -->
+    <div class="topic">
+      <h2>7. Hooks Best Practices</h2>
+      <ul>
+        <li>Always call hooks at the top level of the component.</li>
+        <li>Do not call hooks inside loops, conditions, or nested functions.</li>
+        <li>Use dependency arrays carefully in useEffect to avoid infinite loops.</li>
+        <li>Create custom hooks for reusable logic.</li>
+        <li>Keep components clean and focused on a single responsibility.</li>
+      </ul>
+    </div>
+  
+  </div>
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">

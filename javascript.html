@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
- 
   <title>My Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -31,7 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/css/style.css">
   <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
   * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
@@ -85,94 +84,185 @@
 
     </div>
   </header><!-- End Header -->
+      
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/slider_one.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>Contact</h2>
+        <h2>JAVASCRIPT</h2>
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>Contact</li>
+          <li>JAVASCRIPT</li>
         </ol>
 
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-map"></i>
-              <h3>Our Address</h3>
-              <p> Defence View Society
-                Phase 01 Karachi Pakistan</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-envelope"></i>
-              <h3>Email Us</h3>
-              <p>aayeshaali937@gmail.com
-              </p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-telephone"></i>
-              <h3>Call Us</h3>
-              <p>+92 324 3501697</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-
-          <div class="col-lg-6 ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-              frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-          </div><!-- End Google Maps -->
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row gy-4">
-                <div class="col-lg-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-lg-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
+    <!-- ======= Projet Details Section ======= -->
   </main><!-- End #main -->
+ 
+  <div class="container">
+    <h1>JavaScript</h1>
+    <p>This page provides detailed JavaScript notes with examples and best practices for portfolio or interview purposes.</p>
+
+    <!-- JS Basics -->
+    <div class="topic">
+      <h2>1. JavaScript Basics</h2>
+      <p>JavaScript is a high-level, dynamic programming language used for creating interactive web pages.</p>
+      <ul>
+        <li>Variables: var, let, const</li>
+        <li>Data types: string, number, boolean, object, undefined, null</li>
+        <li>Operators: arithmetic, comparison, logical</li>
+      </ul>
+      <div class="code-block">
+<pre>
+let name = "Ayesha";
+const age = 25;
+var isActive = true;
+
+console.log("Name:", name, "Age:", age, "Active:", isActive);
+</pre>
+      </div>
+    </div>
+
+    <!-- Functions & ES6 -->
+    <div class="topic">
+      <h2>2. Functions & ES6</h2>
+      <p>Functions are reusable blocks of code. ES6 introduces arrow functions, default parameters, template literals, and more.</p>
+      <div class="code-block">
+<pre>
+// Function declaration
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow function
+const multiply = (a, b) =&gt; a * b;
+
+// Template literals
+console.log(`Sum: ${add(2,3)}, Product: ${multiply(2,3)}`);
+</pre>
+      </div>
+    </div>
+
+    <!-- Objects & Arrays -->
+    <div class="topic">
+      <h2>3. Objects & Arrays</h2>
+      <p>Objects store key-value pairs; arrays store ordered lists of items.</p>
+      <div class="code-block">
+<pre>
+// Object
+const user = { name: "Ayesha", age: 25 };
+console.log(user.name);
+
+// Array
+const colors = ["red", "green", "blue"];
+colors.push("yellow");
+colors.forEach(color =&gt; console.log(color));
+</pre>
+      </div>
+    </div>
+
+    <!-- Loops & Conditionals -->
+    <div class="topic">
+      <h2>4. Loops & Conditionals</h2>
+      <p>Control the flow of code using loops and conditional statements.</p>
+      <div class="code-block">
+<pre>
+for(let i=0; i&lt;5; i++) {
+  console.log("Number:", i);
+}
+
+if(colors.includes("red")) {
+  console.log("Red is in the list");
+} else {
+  console.log("Red not found");
+}
+</pre>
+      </div>
+    </div>
+
+    <!-- DOM Manipulation & Events -->
+    <div class="topic">
+      <h2>5. DOM Manipulation & Events</h2>
+      <p>JavaScript can dynamically change HTML content and respond to user actions.</p>
+      <div class="code-block">
+<pre>
+const button = document.querySelector("#myBtn");
+const text = document.querySelector("#myText");
+
+button.addEventListener("click", () =&gt; {
+  text.textContent = "Button Clicked!";
+});
+</pre>
+      </div>
+    </div>
+
+    <!-- Async JS -->
+    <div class="topic">
+      <h2>6. Asynchronous JavaScript</h2>
+      <p>Handle asynchronous operations using callbacks, promises, and async/await.</p>
+      <div class="code-block">
+<pre>
+// Promise
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(res =&gt; res.json())
+  .then(data =&gt; console.log(data))
+  .catch(err =&gt; console.error(err));
+
+// Async/Await
+async function getUsers() {
+  try {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await res.json();
+    console.log(data);
+  } catch(err) {
+    console.error(err);
+  }
+}
+getUsers();
+</pre>
+      </div>
+    </div>
+
+    <!-- Local Storage & JSON -->
+    <div class="topic">
+      <h2>7. Local Storage & JSON</h2>
+      <p>Store and retrieve data in the browser and work with JSON data.</p>
+      <div class="code-block">
+<pre>
+// Local Storage
+localStorage.setItem("name", "Ayesha");
+console.log(localStorage.getItem("name"));
+
+// JSON
+const userJSON = '{"name":"Ayesha","age":25}';
+const userObj = JSON.parse(userJSON);
+console.log(userObj.name);
+</pre>
+      </div>
+    </div>
+
+    <!-- Error Handling -->
+    <div class="topic">
+      <h2>8. Error Handling</h2>
+      <p>Catch errors gracefully using try-catch blocks.</p>
+      <div class="code-block">
+<pre>
+try {
+  let result = riskyOperation();
+  console.log(result);
+} catch(error) {
+  console.error("An error occurred:", error);
+}
+</pre>
+      </div>
+    </div>
+
+  </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">

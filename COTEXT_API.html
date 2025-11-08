@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
- 
   <title>My Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -31,7 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/css/style.css">
   <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
   * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
@@ -85,94 +84,202 @@
 
     </div>
   </header><!-- End Header -->
+      
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/slider_one.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>Contact</h2>
+        <h2>CONTEXT API</h2>
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>Contact</li>
+          <li>CONTEXT API</li>
         </ol>
 
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-map"></i>
-              <h3>Our Address</h3>
-              <p> Defence View Society
-                Phase 01 Karachi Pakistan</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-envelope"></i>
-              <h3>Email Us</h3>
-              <p>aayeshaali937@gmail.com
-              </p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-telephone"></i>
-              <h3>Call Us</h3>
-              <p>+92 324 3501697</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-
-          <div class="col-lg-6 ">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-              frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-          </div><!-- End Google Maps -->
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row gy-4">
-                <div class="col-lg-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-lg-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
+    <!-- ======= Projet Details Section ======= -->
   </main><!-- End #main -->
+
+  <div class="container">
+    <h1>React Context API</h1>
+    <p>This page provides a detailed explanation of React Context API, including how to share state globally across components, practical examples, and best practices.</p>
+  
+    <!-- Context API Basics -->
+    <div class="topic">
+      <h2>1. What is Context API?</h2>
+      <p>The Context API in React is a way to **share state globally** across components without passing props manually at every level (avoiding prop drilling).</p>
+      <ul>
+        <li>Useful for global data like theme, authentication, language, or settings.</li>
+        <li>Works with functional components using <code>useContext</code> hook.</li>
+        <li>Lightweight alternative to Redux for simple global state management.</li>
+      </ul>
+    </div>
+  
+    <!-- Creating Context -->
+    <div class="topic">
+      <h2>2. Creating a Context</h2>
+      <p>Step 1: Create a context using <code>createContext()</code>:</p>
+      <div class="code-block">
+  <pre>
+  import React, { createContext } from 'react';
+  
+  export const ThemeContext = createContext(); // create context
+  </pre>
+      </div>
+    </div>
+  
+    <!-- Providing Context -->
+    <div class="topic">
+      <h2>3. Providing Context</h2>
+      <p>Step 2: Wrap the part of your app that needs access to the context with a <code>Provider</code> and pass a value:</p>
+      <div class="code-block">
+  <pre>
+  import React from 'react';
+  import { ThemeContext } from './ThemeContext';
+  import ChildComponent from './ChildComponent';
+  
+  function App() {
+    const theme = 'dark';
+  
+    return (
+      &lt;ThemeContext.Provider value={theme}&gt;
+        &lt;ChildComponent /&gt;
+      &lt;/ThemeContext.Provider&gt;
+    );
+  }
+  
+  export default App;
+  </pre>
+      </div>
+    </div>
+  
+    <!-- Consuming Context -->
+    <div class="topic">
+      <h2>4. Consuming Context</h2>
+      <p>Step 3: Access the context value using <code>useContext</code> hook in a child component:</p>
+      <div class="code-block">
+  <pre>
+  import React, { useContext } from 'react';
+  import { ThemeContext } from './ThemeContext';
+  
+  function ChildComponent() {
+    const theme = useContext(ThemeContext); // get value from context
+  
+    return &lt;div&gt;Current theme: {theme}&lt;/div&gt;;
+  }
+  
+  export default ChildComponent;
+  </pre>
+      </div>
+    </div>
+  
+    <!-- Example 1: Theme Switcher -->
+    <div class="topic">
+      <h2>5. Example 1: Theme Switcher</h2>
+      <p>A complete example of changing theme globally using Context API:</p>
+      <div class="code-block">
+  <pre>
+  import React, { createContext, useState, useContext } from 'react';
+  
+  const ThemeContext = createContext();
+  
+  function ThemeProvider({ children }) {
+    const [theme, setTheme] = useState('light');
+    const toggleTheme = () =&gt; setTheme(theme === 'light' ? 'dark' : 'light');
+  
+    return (
+      &lt;ThemeContext.Provider value={{ theme, toggleTheme }}&gt;
+        {children}
+      &lt;/ThemeContext.Provider&gt;
+    );
+  }
+  
+  function Child() {
+    const { theme, toggleTheme } = useContext(ThemeContext);
+    return (
+      &lt;div style={{ background: theme==='light'?'#fff':'#333', color: theme==='light'?'#000':'#fff', padding:'20px'}}&gt;
+        Current Theme: {theme}
+        &lt;button onClick={toggleTheme}&gt;Toggle Theme&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+  
+  function App() {
+    return (
+      &lt;ThemeProvider&gt;
+        &lt;Child /&gt;
+      &lt;/ThemeProvider&gt;
+    );
+  }
+  
+  export default App;
+  </pre>
+      </div>
+    </div>
+  
+    <!-- Example 2: Auth Status -->
+    <div class="topic">
+      <h2>6. Example 2: Authentication Status</h2>
+      <p>Using Context API to manage global user login state:</p>
+      <div class="code-block">
+  <pre>
+  import React, { createContext, useState, useContext } from 'react';
+  
+  const AuthContext = createContext();
+  
+  function AuthProvider({ children }) {
+    const [user, setUser] = useState(null);
+    const login = () =&gt; setUser({name:'Ayesha'});
+    const logout = () =&gt; setUser(null);
+  
+    return (
+      &lt;AuthContext.Provider value={{user, login, logout}}&gt;
+        {children}
+      &lt;/AuthContext.Provider&gt;
+    );
+  }
+  
+  function Navbar() {
+    const { user, login, logout } = useContext(AuthContext);
+    return (
+      &lt;div&gt;
+        {user ? &lt;div&gt;Hello {user.name} &lt;button onClick={logout}&gt;Logout&lt;/button&gt;&lt;/div&gt;
+             : &lt;button onClick={login}&gt;Login&lt;/button&gt;}
+      &lt;/div&gt;
+    );
+  }
+  
+  function App() {
+    return (
+      &lt;AuthProvider&gt;
+        &lt;Navbar /&gt;
+      &lt;/AuthProvider&gt;
+    );
+  }
+  
+  export default App;
+  </pre>
+      </div>
+    </div>
+  
+    <!-- Best Practices -->
+    <div class="topic">
+      <h2>7. Context API Best Practices</h2>
+      <ul>
+        <li>Use Context only for global or shared state, not local state.</li>
+        <li>Split context into multiple contexts for different concerns (theme, auth, settings).</li>
+        <li>Wrap only components that need access to reduce unnecessary renders.</li>
+        <li>Combine with custom hooks for cleaner logic.</li>
+        <li>Keep context values simple and avoid passing large objects unless necessary.</li>
+      </ul>
+    </div>
+  
+  </div>
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
